@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Presenter\RegisterPresenter.cs" />
-    <Compile Include="Presenter\StatusPresenter.cs" />
     <Compile Include="Presenter\UserPresenter.cs" />
     <Compile Include="Repository\UserXML.cs" />
     <Compile Include="View\Form1.cs">
