@@ -42,14 +42,14 @@ namespace WinFormFinalproject
             // 
             this.textBox1.Location = new System.Drawing.Point(50, 80);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(313, 19);
+            this.textBox1.Size = new System.Drawing.Size(313, 22);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(50, 148);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(313, 19);
+            this.textBox2.Size = new System.Drawing.Size(313, 22);
             this.textBox2.TabIndex = 1;
             // 
             // LoginName
@@ -58,7 +58,7 @@ namespace WinFormFinalproject
             this.LoginName.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginName.Location = new System.Drawing.Point(172, 47);
             this.LoginName.Name = "LoginName";
-            this.LoginName.Size = new System.Drawing.Size(88, 17);
+            this.LoginName.Size = new System.Drawing.Size(109, 21);
             this.LoginName.TabIndex = 2;
             this.LoginName.Text = "LoginName";
             // 
@@ -68,7 +68,7 @@ namespace WinFormFinalproject
             this.Password.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.Location = new System.Drawing.Point(172, 116);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(73, 17);
+            this.Password.Size = new System.Drawing.Size(90, 21);
             this.Password.TabIndex = 3;
             this.Password.Text = "Password";
             // 
@@ -96,7 +96,7 @@ namespace WinFormFinalproject
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(416, 312);
@@ -110,6 +110,7 @@ namespace WinFormFinalproject
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "StatusBook";
+         
             this.ResumeLayout(false);
             this.PerformLayout();
 

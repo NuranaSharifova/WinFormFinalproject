@@ -18,10 +18,10 @@ namespace WinFormFinalproject.Presenter
         public void Register(string name, string password)
         {
             userXML = new UserXML();
-
+           
             User user = new User(name, password);
             userXML.SaveUser(user);
-
+           
         }
     }
 }

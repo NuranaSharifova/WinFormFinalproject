@@ -11,10 +11,10 @@ namespace WinFormFinalproject.Repository
 {
   public  class UserXML
     {
-        bool firstread = false;
+       public bool firstread { get; set; } = false;
         string Path= "User.xml";
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<User>));
-        List<User> Users;
+        List<User> Users=new List<User>();
         public UserXML()
         {
 
@@ -25,26 +25,25 @@ namespace WinFormFinalproject.Repository
                 
             }
             firstread = true;
-            Users = new List<User>();
+           
         }
 
         public void Read() {
 
-            Users = new List<User>();
-
-
+           
+          
             using (var ser = new StreamReader(Path))
             {
-                Users = (List<User>)xmlSerializer.Deserialize(ser);
+                this.Users = (List<User>)xmlSerializer.Deserialize(ser);
             }
 
         }
-        public void SaveUsers(List<User> users) {
+        public void SaveUsers() {
 
 
             using (var ser = new StreamWriter(Path))
             {
-                xmlSerializer.Serialize(ser, users);
+                xmlSerializer.Serialize(ser, Users);
             }
             MessageBox.Show("Informations have been saved","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
@@ -55,14 +54,15 @@ namespace WinFormFinalproject.Repository
                 Read();
                 usernull = Users.Find(x => x.Username == user.Username);
             }
+   
             firstread = false;
          
             if (usernull==null){
 
-                Users.Add(user);
-            
+                this.Users.Add(user);
+
             }
-            SaveUsers(Users);
+            SaveUsers();
         }
         public IEnumerable<User> GetAllUsers()
         {

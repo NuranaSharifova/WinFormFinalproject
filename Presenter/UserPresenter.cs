@@ -12,6 +12,7 @@ namespace WinFormFinalproject.Presenter
    public  class UserPresenter
     {
         UserXML UserXML=new UserXML();
+        List<User> users = new List<User>();
         User user = new User();
         public UserPresenter()
         {

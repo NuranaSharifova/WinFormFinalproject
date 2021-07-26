@@ -195,7 +195,7 @@ namespace WinFormFinalproject.View
         {
             User.Posts = Posts;
            UserXML.SaveUser(User);
-   
+      
         }
     }
 }
