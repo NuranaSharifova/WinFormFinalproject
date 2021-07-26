@@ -11,23 +11,24 @@ namespace WinFormFinalproject.Presenter
 {
    public  class UserPresenter
     {
-        UserXML UserXML;
-
+        UserXML UserXML=new UserXML();
+        User user = new User();
         public UserPresenter()
         {
-            UserXML = new UserXML(); 
+          
         }
+       
         public void SignIn(string name, string password)
         {
             UserXML.Read();
-            User user = UserXML.GetUserByName(name);
+            user = UserXML.GetUserByName(name);
             if ((user != null) && user.Password == password)
             {
 
 
                 StatusWindow statusWindow = new StatusWindow();
-                statusWindow.ShowDialog();
-                //statusWindow.ShowUserPosts();
+                statusWindow.ShowDialog(user);
+            
             }
             else {
 

@@ -21,10 +21,10 @@ namespace WinFormFinalproject.Repository
             if (!File.Exists(Path)) {
 
                 File.Create(Path).Close();
-                firstread = true;
+                firstread =false;
                 
             }
-           
+            firstread = true;
             Users = new List<User>();
         }
 
@@ -46,7 +46,7 @@ namespace WinFormFinalproject.Repository
             {
                 xmlSerializer.Serialize(ser, users);
             }
-            MessageBox.Show("User have been saved","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Informations have been saved","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
         public void SaveUser(User user) {
             User usernull = null;
