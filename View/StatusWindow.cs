@@ -82,7 +82,7 @@ namespace WinFormFinalproject.View
                 buttonsave.Left = buttonedit.Left + buttonedit.Width;
                 buttonsave.Size = new System.Drawing.Size(60, 40);
                 buttonsave.Click += new System.EventHandler(this.SendButton_Click);
-
+                Posts=User.Posts;
             }
 
         }
