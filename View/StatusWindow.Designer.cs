@@ -36,7 +36,7 @@ namespace WinFormFinalproject.View
             // 
             // statusBox
             // 
-            this.statusBox.Location = new System.Drawing.Point(31, 267);
+            this.statusBox.Location = new System.Drawing.Point(21, 267);
             this.statusBox.Multiline = true;
             this.statusBox.Name = "statusBox";
             this.statusBox.Size = new System.Drawing.Size(328, 36);
@@ -45,7 +45,7 @@ namespace WinFormFinalproject.View
             // Addbutton
             // 
             this.Addbutton.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addbutton.Location = new System.Drawing.Point(381, 267);
+            this.Addbutton.Location = new System.Drawing.Point(355, 267);
             this.Addbutton.Name = "Addbutton";
             this.Addbutton.Size = new System.Drawing.Size(117, 36);
             this.Addbutton.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace WinFormFinalproject.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(510, 307);
+            this.ClientSize = new System.Drawing.Size(475, 307);
             this.Controls.Add(this.Addbutton);
             this.Controls.Add(this.statusBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

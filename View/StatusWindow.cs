@@ -88,8 +88,9 @@ namespace WinFormFinalproject.View
                 Posts.Add(statusBox.Text);
                 Label label = new Label();
                 label.Text = statusBox.Text;
-                label.BackColor = Color.Gray;
+                label.BackColor = Color.White;
                 label.Size = statusBox.Size;
+                label.BorderStyle =BorderStyle.Fixed3D;
                 Controls.Add(label);
                 label.Name = $"{labels.Count + 1}";
                 labels.Add(label);
@@ -97,6 +98,7 @@ namespace WinFormFinalproject.View
                 buttonedit.Name = label.Name;
                 buttonedit.Text = "Edit";
                 buttonedit.BackColor = Color.Red;
+                buttonedit.ForeColor = Color.White;
                 Controls.Add(buttonedit);
                 //buttonedit.Click += new System.EventHandler(this.EditButton_Click);
                 buttonEdit.Add(buttonedit);
@@ -104,21 +106,21 @@ namespace WinFormFinalproject.View
 
                 Button buttonsave = new Button();
                 buttonsave.Name = label.Name;
-                buttonsave.Text = "Edit";
-                //buttonsave.BackColor = Color.Green;
+                buttonsave.Text = "Save";
+                buttonsave.BackColor = Color.Green;
                 Controls.Add(buttonsave);
                 //buttonedit.Click += new System.EventHandler(this.EditButton_Click);
-                buttonEdit.Add(buttonsave);
+                buttonSave.Add(buttonsave);
 
                 int position = 0;
 
 
                 position = labels[labels.Count - 1].Top + labels[labels.Count - 1].Height + 5;
                 label.Top =position;
-                label.Left = 10;
+                label.Left = 20;
                 buttonedit.Top = position;
                 buttonedit.Left = label.Left + label.Width;
-
+                buttonedit.Size = Addbutton.Size;
 
 
                 buttonsave.Top = position;
