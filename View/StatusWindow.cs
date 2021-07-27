@@ -87,16 +87,15 @@ namespace WinFormFinalproject.View
 
         }
         private void EditPost() {
-
+    
             for (int i = 0; i < Posts.Count; i++)
             {
-                if (chosenTextbox.Name == Posts[i])
+                if  (chosenTextbox.Text == Posts[i])
                 {
-                    Posts[i] = chosenTextbox.Text;             
+                    Posts[i] =textboxs[i].Text;
                     break;
                 }
             }
-
         }
         private void SendButton_Click(object sender, EventArgs e)
         {
@@ -113,7 +112,7 @@ namespace WinFormFinalproject.View
                 textBox.Enabled = false;
 
                 Controls.Add(textBox);
-                textBox.Name = $"{textboxs.Count + 1}";
+                textBox.Name = (textboxs.Count + 1).ToString();
                 textboxs.Add(textBox);
                 Button buttonedit = new Button();
                 buttonedit.Name = textBox.Name;
@@ -131,7 +130,6 @@ namespace WinFormFinalproject.View
                 buttonsave.BackColor = Color.Black;
                 buttonsave.ForeColor = Color.White;
                 Controls.Add(buttonsave);
-                buttonedit.Click += new System.EventHandler(this.SendButton_Click);
                 buttonSave.Add(buttonsave);
 
 
@@ -153,15 +151,17 @@ namespace WinFormFinalproject.View
 
 
             }
-            else if ((sender as Button).Text=="Edit")
+            else if ((sender as Button).Text == "Edit")
             {
 
                 foreach (var item in textboxs)
                 {
                     if ((sender as Button).Name == item.Name)
                     {
-                       item.Enabled=true;
-                      
+                        
+                        item.Enabled = true;
+                       
+                        break;
                     }
                 }
 
@@ -174,17 +174,20 @@ namespace WinFormFinalproject.View
                 {
                     if ((sender as Button).Name == item.Name)
                     {
-                        chosenTextbox.Name = item.Name;
+                        chosenTextbox.Text = Posts[Convert.ToInt32(item.Name)-1];
                         item.Enabled = false;
+                    
                         EditPost();
 
+                        break;
                     }
                 }
 
 
-               
+
             }
         }
+      
         public DialogResult ShowDialog(User user)
         {
             User = user;
@@ -193,7 +196,9 @@ namespace WinFormFinalproject.View
         }
         private void StatusWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
-            User.Posts = Posts;
+           
+           User.Posts = Posts;
+           
            UserXML.SaveUser(User);
       
         }
